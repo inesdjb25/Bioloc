@@ -1,0 +1,27 @@
+#card{
+    width: 20rem;
+    height:20rem;
+    margin:auto;
+    border:solid 0.5px rgb(189, 189, 189);
+    border-radius: 10px;
+}
+.trait{
+    border-top: 3px solid rgb(44, 184, 25);
+    width : 400px;
+    margin-left:35px;
+}
+
+#fit-picture{
+    max-width: 230px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+}
+
+.NoImg{ /*Ne pas afficher les div sans image */
+    display:none;
+}
+#compteur{ /*Ne pas afficher les compteur  */
+    display:none;
+}
