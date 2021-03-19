@@ -15,7 +15,7 @@ class NbreCas extends Component {
         };
     }
     componentDidMount() {
-        fetch(`https://fr.openfoodfacts.org/categorie/${this.props.name}.json`)
+        fetch(`https://fr.openfoodfacts.org/label/bio/categorie/${this.props.name}.json`)
             // fetch(`https://world.openfoodfacts.org/api/v0/product/${this.props.name}.json`)
             .then((response) => {
                 return response.json()
@@ -32,7 +32,7 @@ class NbreCas extends Component {
 
         if (this.props.name !== prevProps.name) {
     
-            fetch(`https://fr.openfoodfacts.org/categorie/${this.props.name}.json`)
+            fetch(`https://fr.openfoodfacts.org/label/bio/categorie/${this.props.name}.json`)
                 // fetch(`https://world.openfoodfacts.org/api/v0/product/${this.props.name}.json`)
                 .then((response) => {
 

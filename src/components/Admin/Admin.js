@@ -28,7 +28,7 @@ class Admin extends Component {
 
 
 
-        fetch(`https://fr.openfoodfacts.org/categorie/${this.state.category}.json`)
+        fetch(`https://fr.openfoodfacts.org/label/bio/categorie/${this.state.category}.json`)
             // fetch(`https://world.openfoodfacts.org/api/v0/product/${this.props.name}.json`)
             .then((response) => {
                 return response.json()
@@ -45,7 +45,7 @@ class Admin extends Component {
     componentDidUpdate(prevProps) {
 
         if (this.props.name !== prevProps.name) {
-            fetch(`https://fr.openfoodfacts.org/categorie/${this.state.category}.json`)
+            fetch(`https://fr.openfoodfacts.org/label/bio/categorie/${this.state.category}.json`)
                 // fetch(`https://world.openfoodfacts.org/api/v0/product/${this.props.name}.json`)
                 .then((response) => {
 
