@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 class Commercant extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {email: ''};
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,15 +17,14 @@ class Commercant extends Component {
       }
     
       handleSubmit(event) {
-        alert('Le nom a été soumis : ' + this.state.value);
+        alert('Le nom a été soumis : ' + this.state.email);
         event.preventDefault();
       }
 
     render() {
-        console.log(this.state.value);
+        console.log(this.state.email);
 
         return (
-
 
             <div className="card mb-5">
 
@@ -34,7 +33,7 @@ class Commercant extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <center>
                      <p>Adresse mail </p>   
-                    <input type="text" className="form-control" id="input1" name="firstname" value={this.state.value} onChange={this.handleChange} placeholder="Adresse mail" />
+                    <input type="text" className="form-control" id="input1" name="firstname" value={this.state.email} onChange={this.handleChange} placeholder="Adresse mail" />
                     <p>Mot de passe </p> 
                     <input type="text" className="form-control" id="input1" name="lastname" onChange={this.handleChange} placeholder="Mot de passe" />
                    
