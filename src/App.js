@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Landing from './components/Landing/Landing.js';
 import Admin from './components/Admin/Admin.js';
+
 import Commercant from './components/Commercant/Commercant.js';
 
 import Form from './components/Form/Form.js';
@@ -11,6 +12,7 @@ import React, { Component } from 'react';
 
 import "./components/Header/Header.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Inscription from './components/Inscription/Inscription';
 
 
 
@@ -33,6 +35,7 @@ class App extends Component {
             <Route path="/Admin/:categoryId/:position" component={Admin} />
               
             <Route path="/Commercant" component={Commercant} />
+            <Route path="/Inscription" component={Inscription} />
             <Route path="/">
             
             <Landing/>

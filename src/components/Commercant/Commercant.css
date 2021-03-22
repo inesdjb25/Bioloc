@@ -1,0 +1,10 @@
+.form-group{
+    margin: auto;
+     width: 100px;
+     height: 100px;
+     background-color: aqua;
+}
+
+.card-body {
+    padding: 30px;
+}

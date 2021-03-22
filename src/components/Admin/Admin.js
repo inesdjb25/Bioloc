@@ -53,7 +53,10 @@ class Admin extends Component {
                     this.setState({
                         products: [
                             {
-                                image_url: this.state.products.image_url
+                                image_url: this.state.products.image_url ,
+                                labels: this.state.products.labels,
+                                packaging : this.state.products.packaging,
+                                stores : this.state.products.stores
 
                             }
                         ]
@@ -84,7 +87,9 @@ class Admin extends Component {
                     <div className="card-body">
                         <img id="fit-picture" src={this.state.products.length > 0 && this.state.products[this.state.position].image_url} alt="Grapefruit slice atop a pile of other slices" />
                         <p id="para">Caractéristiques</p>
-
+                        <p id="para">Label : {this.state.products.length > 0 && this.state.products[this.state.position].labels}</p>
+                        <p id="para">Emballage : {this.state.products.length > 0 && this.state.products[this.state.position].packaging} </p>
+                        <p id="para">Ce produit est disponible dans les magasins suivant <br></br> : {this.state.products.length > 0 && this.state.products[this.state.position].stores} </p>
                     </div>
                 </div>
             </BouncyDiv>
