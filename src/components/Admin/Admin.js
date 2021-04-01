@@ -80,20 +80,86 @@ class Admin extends Component {
     render() {
         console.log(this.state.products)
         return (
-            <BouncyDiv>
+            <div>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico" />
+        <title>Carousel Template for Bootstrap</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/" />
+        {/* Bootstrap core CSS */}
+        <link href="../../dist/css/bootstrap.min.css" rel="stylesheet" />
+        {/* Custom styles for this template */}
+        <link href="carousel.css" rel="stylesheet" />
+        
+        <main role="main">
+          
+            
+         
+          <div className="container marketing">
+           
+            
+            {/* START THE FEATURETTES */}
+            <hr className="featurette-divider" />
+            <div className="row featurette">
+              <div className="col-md-7">
+                <h2 className="featurette-heading">
+                {this.state.products.length > 0 && this.state.products[this.state.position].product_name}
+                 <span className="text-muted"> | Catégorie {this.state.category}</span></h2>
+                <p className="lead">
+                
+                <p id="lead">Caractéristiques <br></br>
+                {this.state.products.length > 0 && this.state.products[this.state.position].generic_name_fr}
+
+                </p>
+                        <p id="lead">Label : {this.state.products.length > 0 && this.state.products[this.state.position].labels}</p>
+                       
+                        <p id="lead">Ce produit est disponible dans les magasins suivant <br></br> : {this.state.products.length > 0 && this.state.products[this.state.position].stores} </p>
+                </p>
+              </div>
+              <div className="col-md-5">
+              <BouncyDiv>
                 
                 <div className="card mb-5">
-                    {this.state.products.length > 0 && this.state.products[this.state.position].generic_name_fr}
                     <div className="card-body">
                         <img id="fit-picture" src={this.state.products.length > 0 && this.state.products[this.state.position].image_url} alt="Grapefruit slice atop a pile of other slices" />
-                        <p id="para">Caractéristiques</p>
-                        <p id="para">Label : {this.state.products.length > 0 && this.state.products[this.state.position].labels}</p>
-                        <p id="para">Emballage : {this.state.products.length > 0 && this.state.products[this.state.position].packaging} </p>
-                        <p id="para">Ce produit est disponible dans les magasins suivant <br></br> : {this.state.products.length > 0 && this.state.products[this.state.position].stores} </p>
+
                     </div>
                 </div>
             </BouncyDiv>
-        );
+              </div>
+            </div>
+            <hr className="featurette-divider" />
+            <div className="row featurette">
+              <div className="col-md-7 order-md-2">
+                <h2 className="featurette-heading">Emballage <span className="text-muted">du produit</span></h2>
+                <p className="lead">
+                <p id="lead">{this.state.products.length > 0 && this.state.products[this.state.position].packaging} </p>
+                </p>
+              </div>
+              <div className="col-md-5 order-md-1">
+                <img className="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" />
+              </div>
+            </div>
+            <hr className="featurette-divider" />
+            <div className="row featurette">
+              <div className="col-md-7">
+                <h2 className="featurette-heading">And lastly, this one. <span className="text-muted">Checkmate.</span></h2>
+                <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              </div>
+              <div className="col-md-5">
+                <img className="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" />
+              </div>
+            </div>
+            <hr className="featurette-divider" />
+            {/* /END THE FEATURETTES */}
+          </div>{/* /.container */}
+          
+        </main>
+        
+      </div>
+    );
 
 
     }

@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Landing from './components/Landing/Landing.js';
 import Admin from './components/Admin/Admin.js';
-
+import Home from './components/Home/Home.js';
 import Commercant from './components/Commercant/Commercant.js';
 
 import Form from './components/Form/Form.js';
@@ -36,6 +36,7 @@ class App extends Component {
               
             <Route path="/Commercant" component={Commercant} />
             <Route path="/Inscription" component={Inscription} />
+            <Route path="/Home" component={Home} />
             <Route path="/">
             
             <Landing/>

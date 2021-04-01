@@ -67,8 +67,9 @@ class NbreCas extends Component {
                 
                 if(empresa.image_url){
                     return (
-    
-                        <div className="col-xl-3 col-lg-6 mb-5">
+                        <div>
+                            
+                             <div className="col-xl-3 col-lg-6 mb-5">
                             <div id="card">
                                 <div className="card-body">
                                 <a href={"Admin/"+ this.props.name+"/"+index }><img id="fit-picture" src={empresa.image_url} alt="Grapefruit slice atop a pile of other slices" /></a>
@@ -83,6 +84,8 @@ class NbreCas extends Component {
                                 </div>
                             </div>
                         </div>
+                        </div>
+                       
     
                     )
                 }

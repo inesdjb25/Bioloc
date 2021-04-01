@@ -15,13 +15,14 @@ class Header extends Component {
         return (
             <div>
                 <nav className="navbar navbar-dark bg-dark">
-                    <Link to="/" className="text-white">
+                    <Link to="/Home" className="text-white">
                         BioLoc
                 </Link>
                 
                     <span class="navbar-text">
-                    <Link to="/Admin" className="Header-a"> Nos produits </Link>
-                        <Link to="/Commercant" className="Header-a">Commerçant</Link>
+                    <Link to="/Astuce" className="Header-a"> Astuce | </Link>
+                    <Link to="/Admin" className="Header-a"> Nos produits  | </Link>
+                        <Link to="/Commercant" className="Header-a"> Commerçant</Link>
                     </span>
 
 
