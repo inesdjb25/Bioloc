@@ -3,7 +3,7 @@
     height:20rem;
     margin:auto;
     border:solid 0.5px rgb(189, 189, 189);
-    border-radius: 10px;
+    border-radius: 15px;
 }
 .trait{
     border-top: 3px solid rgb(44, 184, 25);
@@ -11,7 +11,7 @@
     margin-left:35px;
 }
 
-#fit-picture{
+#fit-picture_accueil{
     max-width: 230px;
     max-height: 150px;
     width: auto;

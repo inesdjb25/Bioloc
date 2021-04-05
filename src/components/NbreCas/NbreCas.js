@@ -72,7 +72,7 @@ class NbreCas extends Component {
                              <div className="col-xl-3 col-lg-6 mb-5">
                             <div id="card">
                                 <div className="card-body">
-                                <a href={"Admin/"+ this.props.name+"/"+index }><img id="fit-picture" src={empresa.image_url} alt="Grapefruit slice atop a pile of other slices" /></a>
+                                <a href={"Admin/"+ this.props.name+"/"+index }><img id="fit-picture_accueil" src={empresa.image_url} alt="Grapefruit slice atop a pile of other slices" /></a>
                                     
                                     <h6 className="card-title mt-2">
                                         {empresa.product_name}

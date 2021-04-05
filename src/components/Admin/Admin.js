@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
 import "./Admin.css";
-import logo from './ece.png';
+
 import styled, { keyframes } from 'styled-components';
 
 import { fadeIn } from 'react-animations';
 
+import a_b from 'D:/ECE/Bioloc/src/images/labels/ab_agriculture_biologique.png';
 
 const bounceAnimation = keyframes`${fadeIn}`;
 
 const BouncyDiv = styled.div`
   animation: 1s ${bounceAnimation};
 `;
+
+
+function set_img(logo) {
+  // Import result is the URL of your image
+  return <img id="img-label" src={logo} alt="Logo" />;
+}
 
 
 class Admin extends Component {
@@ -22,6 +29,8 @@ class Admin extends Component {
             position: this.props.match.params.position,
             image: ''
         };
+
+        
 
     }
     componentDidMount() {
@@ -79,6 +88,16 @@ class Admin extends Component {
 
     render() {
         console.log(this.state.products)
+        if (this.state.products.length > 0 && this.state.products[this.state.position].labels.includes("Agriculture Biologique") ) {
+          console.log(this.state.products[this.state.position].labels.includes("Bio"))
+         
+
+        }
+         
+       // ON TEST SI LES DIFFERENTS LABELS POUR POUVOIR LES AFFICHER
+        
+       
+
         return (
             <div>
         <meta charSet="utf-8" />
@@ -90,7 +109,7 @@ class Admin extends Component {
         <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/" />
         {/* Bootstrap core CSS */}
         <link href="../../dist/css/bootstrap.min.css" rel="stylesheet" />
-        {/* Custom styles for this template */}
+        
         <link href="carousel.css" rel="stylesheet" />
         
         <main role="main">
@@ -100,7 +119,7 @@ class Admin extends Component {
           <div className="container marketing">
            
             
-            {/* START THE FEATURETTES */}
+           
             <hr className="featurette-divider" />
             <div className="row featurette">
               <div className="col-md-7">
@@ -113,7 +132,9 @@ class Admin extends Component {
                 {this.state.products.length > 0 && this.state.products[this.state.position].generic_name_fr}
 
                 </p>
-                        <p id="lead">Label : {this.state.products.length > 0 && this.state.products[this.state.position].labels}</p>
+                        <p id="lead">Label : {this.state.products.length > 0 && this.state.products[this.state.position].labels }</p>
+                        
+                        {set_img(a_b)};
                        
                         <p id="lead">Ce produit est disponible dans les magasins suivant <br></br> : {this.state.products.length > 0 && this.state.products[this.state.position].stores} </p>
                 </p>
@@ -159,10 +180,13 @@ class Admin extends Component {
         </main>
         
       </div>
+
+      
     );
 
 
-    }
+    
+}
 }
 
 export default Admin;
