@@ -64,9 +64,6 @@ class Commercant extends React.Component {
       <div>
        
           <form onSubmit={this.handleSubmit}>
-          
-          
-        
             <div className="form-group text-center">
 
             <input type="text" className="form-control form-control-sm" name="mail" placeholder="Votre adresse email"  autoComplete="on" required minLength={2} value={this.state.mail} onChange={this.handleChange}/>

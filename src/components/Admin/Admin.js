@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Admin.css";
 
 import Avis from 'D:/ECE/Bioloc/src/components/Avis/Avis.js';
+import Astuce from 'D:/ECE/Bioloc/src/components/Astuce/Astuce.js';
 import styled, { keyframes } from 'styled-components';
 
 import { fadeIn } from 'react-animations';
@@ -14,8 +15,12 @@ import fair_trade from 'D:/ECE/Bioloc/src/images/labels/fair_trade.png';
 import emballage from 'D:/ECE/Bioloc/src/images/emballages/emballage.png';
 
 // ECOSCORE
-import eco_a from 'D:/ECE/Bioloc/src/images/ecoscores/A.png';
-import eco_c from 'D:/ECE/Bioloc/src/images/ecoscores/C.png';
+import eco_a from 'D:/ECE/Bioloc/src/images/ecoscores/e.png';
+import eco_b from 'D:/ECE/Bioloc/src/images/ecoscores/b.png';
+import eco_c from 'D:/ECE/Bioloc/src/images/ecoscores/e.png';
+import eco_d from 'D:/ECE/Bioloc/src/images/ecoscores/d.png';
+import eco_e from 'D:/ECE/Bioloc/src/images/ecoscores/e.png';
+
 
 // IMAGE DES LABELS
 let img_1 = "";
@@ -142,9 +147,22 @@ class Admin extends Component {
 
 
     // IMAGE DES ECO SCORE
-    if (this.state.products.length > 0 && this.state.products[this.state.position].ecoscore_grade == "c") {
+    if (this.state.products.length > 0 && this.state.products[this.state.position].ecoscore_grade == "a") {
+      console.log("ok")
+      ecos = eco_a;
+    }if (this.state.products.length > 0 && this.state.products[this.state.position].ecoscore_grade == "b") {
+      console.log("ok")
+      ecos = eco_b;
+    }if (this.state.products.length > 0 && this.state.products[this.state.position].ecoscore_grade == "c") {
       console.log("ok")
       ecos = eco_c;
+    }if (this.state.products.length > 0 && this.state.products[this.state.position].ecoscore_grade == "d") {
+      console.log("ok")
+      ecos = eco_d;
+    }
+    if (this.state.products.length > 0 && this.state.products[this.state.position].ecoscore_grade == "e") {
+      console.log("ok")
+      ecos = eco_e;
     }
 
 
@@ -239,6 +257,24 @@ class Admin extends Component {
               </div>
             </div>
             <hr className="featurette-divider" />
+            <hr className="featurette-divider" />
+            <div className="row featurette">
+              <div className="col-md-7">
+                <h2 className="featurette-heading">Votre avis nous <span className="text-muted">intéresse.</span></h2>
+                <p className="lead">
+                < Astuce category={this.state.category} position={this.state.position}/>
+                  
+                </p>
+              </div>
+              
+              <div className="col-md-5">
+                <img className="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" />
+              </div>
+            </div>
+            <hr className="featurette-divider" />
+
+
+            
             {/* /END THE FEATURETTES */}
           </div>{/* /.container */}
         </main>
