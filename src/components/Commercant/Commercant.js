@@ -1,27 +1,65 @@
 import React, { Component } from 'react';
 import "./Commercant.css";
 import { Link } from "react-router-dom";
+import { Redirect } from 'react-router';
 
 
 class Commercant extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = { 
+      mail: '',
+      motdepasse: '',
+      redirect: false,
+      data: []
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+  componentDidMount() {
+    fetch(`http://localhost:3001/posts/connexion`)
+      .then((response) => {
+        return response.json()
 
+      })
+
+      .then((result) => {
+        this.setState({ data: result });
+
+      })
+
+  }
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
+    {
+      this.state.data.map(empresa => {
+        if((empresa.mail == this.state.mail)){
+
+          if((empresa.motdepasse == this.state.motdepasse)){
+            return(
+              this.setState({
+                redirect: true
+              })
+            )
+          }
+         
+        }
+      })
+    }
+  
   }
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/Astuce" />
+    }
     return (
       <div>
        
@@ -30,8 +68,9 @@ class Commercant extends React.Component {
           
         
             <div className="form-group text-center">
-            <input type="text" className="form-control form-control-sm" name="mail" placeholder="Votre adresse email" style={{ padding: '3px 8px 4px -6px', borderWidth: '2px', margin: '0px', marginTop: '10px', marginBottom: '9px', borderRadius: '7px', boxShadow: '0px 0px var(--indigo)' }} autoComplete="on" required minLength={2} value={this.state.value} onChange={this.handleChange}/>
-           <input type="password" className="form-control form-control-sm" name="motdepasse" placeholder="Mot de passe" style={{ padding: '3px 8px 4px -6px', borderWidth: '2px', margin: '0px', marginTop: '10px', marginBottom: '9px', borderRadius: '7px', boxShadow: '0px 0px var(--indigo)' }} autoComplete="on" required minLength={2} />
+
+            <input type="text" className="form-control form-control-sm" name="mail" placeholder="Votre adresse email"  autoComplete="on" required minLength={2} value={this.state.mail} onChange={this.handleChange}/>
+           <input type="password" className="form-control form-control-sm" name="motdepasse" placeholder="Mot de passe"  autoComplete="on" required minLength={2} value={this.state.motdepasse} onChange={this.handleChange}/>
             <button className="btn btn-primary text-right" type="submit">Se connecter </button></div>
           </form>
           <p><a href="/Inscription">Pas encore de compte ? Venez vous inscrire</a> </p>

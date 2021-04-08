@@ -8,8 +8,9 @@
     max-width: 3500;
 }
 
-.form-control{
-    width: 250px;
+#form-control {
+    position: relative;
+    top:1% ;
 }
 .bouton2{
     width: 250px;
@@ -51,4 +52,21 @@ center{
     margin-left: auto;
     margin-right: auto;
     /* margin: auto; */
+}
+
+#emballage{
+    max-width: 200px;
+    max-height: 180px;
+    
+}
+
+#img-ecoscore{
+    max-width: 150px;
+    max-height: 180px;
+}
+
+#formulaire{
+    position: relative;
+    top:1% ;
+    
 }
