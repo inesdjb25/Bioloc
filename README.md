@@ -62,7 +62,6 @@ npm start
 
 
 <!-- GETTING STARTED -->
-## Outil de répartition des tâches
 
 
 
