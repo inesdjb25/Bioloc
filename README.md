@@ -12,12 +12,13 @@
     <img src="https://github.com/malikotte/Projet-Dashboard/blob/main/src/covid.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">COVID-19</h3>
+  <h3 align="center">Bioloc</h3>
 
   <p align="center">
-    Application sur la pandémie de COVID-19
+    
+    Site en ligne pour connaître les produits bio & locaux près de chez vous
   </p>
-  <p align="center"><b>Malik Derkaoui • Inès Djebra</b></p>
+  <p align="center"><b>Heddi Adoudi • Inès Djebra • Arthur Jaillard • Daroukous Mendes • Rémi Moucer • Nabil Ouarezki </b></p>
 </p>
 
 
@@ -27,9 +28,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## À propos du projet
-
-Notre projet intitulé Covid Analyzer a pour but d'afficher les données issues des différents gouvernements sur le Coronavirus. C'est une application web créee en ReactJS/Nodejs, sur le site est présent 6 widgets qui affichent différentes informations sur le pays choisi par l'utilisateur et sur l'ECE Paris.
-Vous avez à disposition une page d'administration qui va vous permettre d'injecter des données dans un des 6 widgets présents sur le site.
+Nous avons décidé de nous appuyer sur la base de donnée d'Open Fact Food afin de recenser les produits bio.
+Nous vous encourageons à nous aider dans notre démarche de transparance des produits ainsi que leur provenance.
+Mais surtout, nous souhaitons mettre en avant via notre plateforme les commercants, afin qu'ils aient plus de visilibilté surtout en cette période de pandémie.
 
 
 ### Comment lancer notre projet ?
@@ -54,25 +55,14 @@ npm install
 npm start
 ```
 
-3) Si vous souhaitez visualiser le storybook (http://localhost:6006/), rendez-vous à la racine du projet (main) et faites la commande suivant : npm run storybook.
-
-```
-npm run storybook
-```
 
 4) Pour que l'étape 1) fonctionne, vous devez avoir préalablement avoir installé mongodb sur votre ordinateur afin que la base de données puisse fonctionner. <b>(Par défaut, notre api est reliée à une base de données en ligne, cette étape n'est pas importante si vous ne souhaitez pas gérer la bdd de votre côté)</b>.
 
 5) Parfait ! Tout est lancé, vous pouvez dès à présent utiliser notre application Web (http://localhost:3000/), amusez-vous bien !
 
-6) Notre application Web est aussi visible sur ce lien https://covid19projet.herokuapp.com/ et l'api https://express-app-covid.herokuapp.com/
 
 <!-- GETTING STARTED -->
 ## Outil de répartition des tâches
-
-Nous avons utilisé Trello pour nous aider à la répartition des tâches, c'est un outil simple d'utilisation et qui permet d'une vue global de voir le travail qui a ou qui doit être effectué.
-Nous vous mettons à disposition notre lien : https://trello.com/b/CWNUWDkD/travail-de-groupe
-
-
 
 
 
